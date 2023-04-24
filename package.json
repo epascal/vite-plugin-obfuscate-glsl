@@ -1,0 +1,34 @@
+{
+  "name": "vite-plugin-obfuscate-glsl",
+  "version": "1.0.0",
+  "description": "Obfuscate GLSL in file using laurentlb/Shader_Minifier",
+  "author": "Eric Pascal",
+  "license": "MIT",
+  "repository": "epascal/obfuscate-glsl",
+  "main": "dist/plugin.js",
+  "files": [
+    "src",
+    "dist"
+  ],
+  "scripts": {
+    "build": "tsc -p .",
+    "prepare": "yarn build"
+  },
+  "peerDependencies": {
+    "vite": ">2.0.0-0"
+  },
+  "dependencies": {
+  },
+  "devDependencies": {
+    "@alloc/prettier-config": "^1.0.0",
+    "@types/node": "^14.14.20",
+    "prettier": "^2.0.5",
+    "typescript": "5.0.4",
+    "vite": "4.3.1"
+  },
+  "prettier": "@alloc/prettier-config",
+  "keywords": [
+    "vite",
+    "vite-plugin"
+  ]
+}
