@@ -9,7 +9,9 @@ const vite_plugin_obfuscate_glsl_1 = __importDefault(require("vite-plugin-obfusc
 exports.default = (0, vite_1.defineConfig)({
     plugins: [
         (0, plugin_react_refresh_1.default)(),
-        (0, vite_plugin_obfuscate_glsl_1.default)(),
+        (0, vite_plugin_obfuscate_glsl_1.default)({
+            'shaderMinifier': '/home/epascal/Projects/vite-plugin-obfuscate-glsl/shader_minifier.exe'
+        }),
     ],
 });
 //# sourceMappingURL=vite.config.js.map

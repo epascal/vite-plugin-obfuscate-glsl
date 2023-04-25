@@ -5,13 +5,16 @@ exports.default = (config = {}) => {
     return {
         name: 'obfuscate-glsl',
         transform(src, id) {
-            console.log(id);
-            const cmd = (0, child_process_1.spawnSync)('shader_minifier.exe');
-            if (cmd.status === 0) {
-                return src;
-            }
-            else {
-                return 'Error';
+            if (config.shaderMinifier && id.endsWith('.glsl?raw')) {
+                const glslCode = JSON.parse(src.replace('export default', ''));
+                const cmd = (0, child_process_1.spawnSync)(config.shaderMinifier, ['--format', 'text', '--preserve-externals', '-o', '-', id.replace('?raw', '')]);
+                if (cmd.status === 0) {
+                    return `export default ${JSON.stringify(cmd.stdout.toString())}`;
+                }
+                else {
+                    console.log('Error');
+                    return 'Error';
+                }
             }
         },
     };

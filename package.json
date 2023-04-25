@@ -5,14 +5,14 @@
   "author": "Eric Pascal",
   "license": "MIT",
   "repository": "epascal/obfuscate-glsl",
-  "main": "dist/plugin.js",
+  "main": "build/src/plugin.js",
   "files": [
     "src",
     "dist"
   ],
   "scripts": {
     "build": "tsc -p .",
-    "prepare": "yarn build"
+    "test": "tsc -p . && cd demo && vite build"
   },
   "peerDependencies": {
     "vite": ">2.0.0-0"
