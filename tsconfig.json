@@ -2,8 +2,8 @@
   "compilerOptions": {
     "removeComments": true,
     "sourceMap": true,
-    "target": "es6",
-    "module":"commonjs",
+    "target": "es2017",
+    "module":"esnext",
     "moduleResolution": "node",
     "esModuleInterop": true,
     "resolveJsonModule": true,

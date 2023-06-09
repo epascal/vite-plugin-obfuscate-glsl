@@ -1,5 +1,6 @@
 {
   "name": "vite-plugin-obfuscate-glsl",
+  "type": "module",
   "version": "1.0.0",
   "description": "Obfuscate GLSL in file using laurentlb/Shader_Minifier",
   "author": "Eric Pascal",
