@@ -1,7 +1,7 @@
 {
   "name": "vite-plugin-obfuscate-glsl",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Obfuscate GLSL in file using laurentlb/Shader_Minifier",
   "author": "Eric Pascal",
   "license": "MIT",
@@ -9,7 +9,8 @@
   "main": "build/src/plugin.js",
   "files": [
     "src",
-    "dist"
+    "dist",
+    "shader_minifier.exe"
   ],
   "scripts": {
     "build": "tsc -p .",
